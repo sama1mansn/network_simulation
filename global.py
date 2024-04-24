@@ -89,7 +89,7 @@ def run_simulation(network_status):
             network.partition_nodes = list(compress(VALIDATOR_IDS,\
                                                     [np.random.uniform() < NETWORK_PARTITION for _ in nodes]))
             cur_partition_time = randint(1,POOL_SIZE/5) ## next partition
-            long_lived_partition = False
+            long_lived_partition = true
         
 
         print("Partition size: %s for: %s" % (len(network.partition_nodes), cur_partition_time))
